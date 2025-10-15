@@ -10,12 +10,12 @@ st.write("Eleccion:",option)
 #solicitar un radio
 if option=="Circulo":
   radio = st.slider("selecciona el radio", 0.0, 10.0, 5.0)
-  area=math.pi * radio**2
-  perimetro=2*math.pi*radio
+  area1=math.pi * radio**2
+  perimetro1=2*math.pi*radio
   col1, col2, col3 = st.columns(3)
   col1.metric("Radio", radio, "0")
-  col2.metric("Area", area, "0")
-  col3.metric("Perimetro", perimetro, "0")
+  col2.metric("Area", area1, "0")
+  col3.metric("Perimetro", perimetro1, "0")
 if option=="Triangulo":
 # Solicitar al usuario la base y la altura
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
@@ -23,17 +23,17 @@ if option=="Triangulo":
   a=st.slider("longiutd de a", 0.0, 10.0, 5.0) 
   b=st.slider("longiutd de b", 0.0, 10.0, 5.0) 
   c=base
-  Perimetro=a+b+c
+  Perimetro2=a+b+c
 # Calcular y mostrar el área
-  area = base*altura*0.5
+  area2 = base*altura*0.5
   col4, col5 = st.columns(2)
-  col4.metric("perimetro", Perimetro, "0")
-  col5.metric("Area", area, "0")
+  col4.metric("perimetro", Perimetro2, "0")
+  col5.metric("Area", area2, "0")
 elif option=="Rectangulo":
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
   altura= st.slider("seleccione la altura", 0.0, 10.0, 5.0)
-  area=base*altura
-  perimetro=2*(base+altura)
+  area3=base*altura
+  perimetro3=2*(base+altura)
   col6, col7 = st.columns(2)
-  col6.metric("perimetro", perimetro, "0")
-  col7.metric("Area", area, "0")
+  col6.metric("perimetro", perimetro3, "0")
+  col7.metric("Area", area3, "0")
