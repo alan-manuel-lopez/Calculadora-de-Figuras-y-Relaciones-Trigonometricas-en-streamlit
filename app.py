@@ -20,7 +20,7 @@ if option=="Circulo":
 from matplotlib.patches import Circle
 
 # 1. Crear una figura y un eje
-    fig, ax = plt.subplots()
+fig, ax = plt.subplots()
 
 # 2. Crear el objeto círculo
 #    - El primer argumento es la coordenada del centro (x, y).
