@@ -17,14 +17,9 @@ col1.metric("Radio", radio, "0")
 col2.metric("Area", area, "0")
 col3.metric("Perimetro", perimetro, "0")
 else option=="Triangulo":
-  def calcular_area(base, altura):
-    return 0.5 * base * altura
-
 # Solicitar al usuario la base y la altura
-base_triangulo = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
-altura_triangulo = st.slider("seleccione la altura", 0.0, 10.0, 5.0)
-
-
+  base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
+  altura= st.slider("seleccione la altura", 0.0, 10.0, 5.0)
 # Calcular y mostrar el área
-area = calcular_area(base_triangulo, altura_triangulo)
-print(f"El área del triángulo es: {area}")
+  area = base*altura*0.5
+  print(f"El área del triángulo es: {area}")
