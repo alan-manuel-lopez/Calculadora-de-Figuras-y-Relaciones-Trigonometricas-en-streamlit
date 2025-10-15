@@ -35,5 +35,5 @@ elif option=="Rectangulo":
   area=base*altura
   perimetro=2*(base+altura)
   col6, col7 = st.columns(2)
-  col6.metric("perimetro", Perimetro, "0")
+  col6.metric("perimetro", perimetro, "0")
   col7.metric("Area", area, "0")
