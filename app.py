@@ -1,6 +1,7 @@
 import streamlit as st
 import math
 st.title("calculadora de figuras")
+st.sidebar.write("alan manuel lopez garcia")
 option=st.selectbox(
   "¿Que figura deseas calcular?",
   ("Circulo","Triangulo","Rectangulo","Cuadrado"),
