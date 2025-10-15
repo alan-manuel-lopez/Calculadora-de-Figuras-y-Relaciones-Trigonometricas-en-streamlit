@@ -1,4 +1,1 @@
 streamlit
-matplotlib.pyplot
-matplotlib.patches
-math
