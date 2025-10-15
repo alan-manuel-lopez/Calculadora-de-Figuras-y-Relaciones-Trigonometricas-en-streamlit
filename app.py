@@ -29,3 +29,11 @@ if option=="Triangulo":
   col4, col5 = st.columns(2)
   col4.metric("perimetro", Perimetro, "0")
   col5.metric("Area", area, "0")
+if option=="rectangulo":
+  base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
+  altura= st.slider("seleccione la altura", 0.0, 10.0, 5.0)
+  area=base*altura
+  perimetro=2*(base+altura)
+  col6, col7 = st.columns(2)
+  col6.metric("perimetro", Perimetro, "0")
+  col7.metric("Area", area, "0")
