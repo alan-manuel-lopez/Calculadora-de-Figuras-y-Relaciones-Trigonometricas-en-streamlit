@@ -7,7 +7,7 @@ option=st.selectbox(
   ("Circulo","Triangulo","Rectangulo","Cuadrado"),
 )
 st.write("Eleccion:",option)
-if option==Circulo:
+if option=="Circulo":
   radio = st.slider("selecciona el radio", 0.0, 10.0, 5.0)
   area=math.pi * radio**2
   perimetro=2*math.pi*radio
