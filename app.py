@@ -37,3 +37,10 @@ elif option=="Rectangulo":
   col6, col7 = st.columns(2)
   col6.metric("perimetro", perimetro3, "0")
   col7.metric("Area", area3, "0")
+else option=="Cuadrado":
+  lado=st.slider("longitud de un lado",0.0, 10.0, 5.0)
+  area4=lado**2
+  perimetro4=4*lado
+  col8, col9 = st.columns(2)
+  col8.metric("perimetro", Perimetro4, "0")
+  col9.metric("Area", area4, "0")
