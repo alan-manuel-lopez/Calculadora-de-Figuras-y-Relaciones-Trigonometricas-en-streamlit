@@ -16,7 +16,7 @@ if option=="Circulo":
 col1.metric("Radio", radio, "0")
 col2.metric("Area", area, "0")
 col3.metric("Perimetro", perimetro, "0")
-elif option=="Triangulo":
+else option=="Triangulo":
   def calcular_area(base, altura):
     return 0.5 * base * altura
 
