@@ -7,6 +7,7 @@ option=st.selectbox(
   ("Circulo","Triangulo","Rectangulo","Cuadrado"),
 )
 st.write("Eleccion:",option)
+#solicitar un radio
 if option=="Circulo":
   radio = st.slider("selecciona el radio", 0.0, 10.0, 5.0)
   area=math.pi * radio**2
@@ -15,3 +16,15 @@ if option=="Circulo":
 col1.metric("Radio", radio, "0")
 col2.metric("Area", area, "0")
 col3.metric("Perimetro", perimetro, "0")
+elf option=="Triangulo":
+  def calcular_area(base, altura):
+  return 0.5 * base * altura
+
+# Solicitar al usuario la base y la altura
+base_triangulo = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
+altura_triangulo = st.slider("seleccione la altura", 0.0, 10.0, 5.0)
+
+
+# Calcular y mostrar el área
+area = calcular_area(base_triangulo, altura_triangulo)
+print(f"El área del triángulo es: {area}")
