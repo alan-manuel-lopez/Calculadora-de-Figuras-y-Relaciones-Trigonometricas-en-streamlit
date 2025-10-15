@@ -16,7 +16,7 @@ if option=="Circulo":
 col1.metric("Radio", radio, "0")
 col2.metric("Area", area, "0")
 col3.metric("Perimetro", perimetro, "0")
-else option=="Triangulo":
+if option=="Triangulo":
 # Solicitar al usuario la base y la altura
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
   altura= st.slider("seleccione la altura", 0.0, 10.0, 5.0)
