@@ -1,5 +1,6 @@
 import streamlit as st
 import math
+import matplotlib as st
 st.title("calculadora de figuras")
 option=st.selectbox(
   "¿Que figura deseas calcular?",
