@@ -18,7 +18,7 @@ col2.metric("Area", area, "0")
 col3.metric("Perimetro", perimetro, "0")
 if option=="Triangulo":
   def calcular_area(base, altura):
-  return 0.5 * base * altura
+    return 0.5 * base * altura
 
 # Solicitar al usuario la base y la altura
 base_triangulo = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
