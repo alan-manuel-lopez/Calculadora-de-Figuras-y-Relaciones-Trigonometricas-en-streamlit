@@ -1,5 +1,7 @@
 import streamlit as st
 import math
+import matplotlib.pyplot as plt
+  from matplotlib.patches import Circle
 st.title("calculadora de figuras")
 option=st.selectbox(
   "¿Que figura deseas calcular?",
@@ -8,8 +10,6 @@ option=st.selectbox(
 st.write("Eleccion:",option)
 #solicitar un radio
 if option=="Circulo":
-  import matplotlib.pyplot as plt
-from matplotlib.patches import Circle
   radio = st.slider("selecciona el radio", 0.0, 10.0, 5.0)
   area1=math.pi * radio**2
   perimetro1=2*math.pi*radio
