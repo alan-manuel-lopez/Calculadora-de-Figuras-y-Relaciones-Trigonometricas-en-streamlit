@@ -20,6 +20,12 @@ if option=="Triangulo":
 # Solicitar al usuario la base y la altura
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
   altura= st.slider("seleccione la altura", 0.0, 10.0, 5.0)
+  a=st.slider("longiutd de a", 0.0, 10.0, 5.0) 
+  b=st.slider("longiutd de b", 0.0, 10.0, 5.0) 
+  c=base
+  Perimetro=a+b+c
 # Calcular y mostrar el área
   area = base*altura*0.5
-  print(f"El área del triángulo es: {area}")
+  col4, col5 = st.columns(2)
+  col4.metric("perimetro", Perimetro, "0")
+  col5.metric("Area", area, "0")
