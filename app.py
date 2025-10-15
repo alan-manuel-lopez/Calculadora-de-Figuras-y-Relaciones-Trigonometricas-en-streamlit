@@ -26,20 +26,20 @@ fig, ax = plt.subplots()
 #    - El primer argumento es la coordenada del centro (x, y).
 #    - El argumento 'radius' define el tamaño.
 #    - 'fill=False' lo dibuja solo como un contorno.
-  circulo = Circle((0, 0), radius=radio, fill=False, color='blue')
+circulo = Circle((0, 0), radius=radio, fill=False, color='blue')
 
 # 3. Añadir el círculo al eje
-  ax.add_patch(circulo)
+ax.add_patch(circulo)
 
 # 4. Establecer los límites para asegurar que el círculo sea visible
-  ax.set_xlim(-6, 6)
-  ax.set_ylim(-6, 6)
+ax.set_xlim(-6, 6)
+ax.set_ylim(-6, 6)
 
 # 5. Asegurar que la relación de aspecto sea igual (para que no se vea como una elipse)
-  ax.set_aspect('equal')
+ax.set_aspect('equal')
 
 # 6. Mostrar el gráfico
-  plt.show()
+plt.show()
 if option=="Triangulo":
 # Solicitar al usuario la base y la altura
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
