@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib.patches as patches
 import streamlit as st
 import math
 st.title("calculadora de figuras")
@@ -17,6 +18,26 @@ if option=="Circulo":
   col1.metric("Radio", radio, "0")
   col2.metric("Area", area1, "0")
   col3.metric("Perimetro", perimetro1, "0")
+# 1. Crea una figura y un eje
+fig, ax = plt.subplots()
+
+# 2. Crea un círculo. 
+# Parámetros: centro (x, y) y radio (radius)
+# fill=False para que solo dibuje el borde
+circle = patches.Circle((0.5, 0.5), radius=0.3, fill=False)
+
+# 3. Añade el parche del círculo al eje
+ax.add_patch(circle)
+
+# 4. Establece los límites de los ejes para asegurar que el círculo sea visible
+ax.set_xlim(0, 1)
+ax.set_ylim(0, 1)
+
+# 5. Asegura que el aspecto de los ejes sea igual
+plt.axis('equal')
+
+# 6. Muestra el gráfico
+plt.show()
 if option=="Triangulo":
 # Solicitar al usuario la base y la altura
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
