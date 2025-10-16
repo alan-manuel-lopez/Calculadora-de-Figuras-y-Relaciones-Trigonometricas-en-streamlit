@@ -27,12 +27,17 @@ if option=="Circulo":
 # 2. Crea un círculo. 
 # Parámetros: centro (x, y) y radio (radius)
 # fill=False para que solo dibuje el borde
-  circle = patches.Circle((0.0, 0.0), radius=radio, color=color, fill=False)
+  circle = patches.Circle((0.0, 0.0), radio, color=color, fill=False)
 
 # 3. Añade el parche del círculo al eje
-  ax.add_artis(circle)
+  ax.add_artist(circle)
   ax.set_aspect('equal')
+  ax.set_xlim(-radio - 1, radio + 1)
+  ax.set_ylim(-radio - 1, radio + 1)
+
+# Mostrar en Streamlit
   st.pyplot(fig)
+  plt.close(fig)
 if option=="Triangulo":
 # Solicitar al usuario la base y la altura
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
