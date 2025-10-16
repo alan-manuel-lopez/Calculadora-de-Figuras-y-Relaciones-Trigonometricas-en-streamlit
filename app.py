@@ -27,20 +27,12 @@ if option=="Circulo":
 # 2. Crea un círculo. 
 # Parámetros: centro (x, y) y radio (radius)
 # fill=False para que solo dibuje el borde
-  circle = patches.Circle((5.0, 5.0), radius=radio, color=color, fill=False)
+  circle = patches.Circle((0.0, 0.0), radius=radio, color=color, fill=False)
 
 # 3. Añade el parche del círculo al eje
-  ax.add_patch(circle)
-
-# 4. Establece los límites de los ejes para asegurar que el círculo sea visible
-  ax.set_xlim(0, 10)
-  ax.set_ylim(0, 10)
-
-# 5. Asegura que el aspecto de los ejes sea igual
-  plt.axis('equal')
-
-# 6. Muestra el gráfico
-  plt.show()
+  ax.add_artis(circle)
+  ax.set_aspect('equal')
+  st.pyplot(fig)
 if option=="Triangulo":
 # Solicitar al usuario la base y la altura
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
