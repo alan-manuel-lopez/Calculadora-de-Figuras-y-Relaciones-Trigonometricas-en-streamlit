@@ -24,14 +24,14 @@ if option=="Circulo":
 # 2. Crea un círculo. 
 # Parámetros: centro (x, y) y radio (radius)
 # fill=False para que solo dibuje el borde
-  circle = patches.Circle((0.5, 0.5), radius=0.3, fill=False)
+  circle = patches.Circle((5.0, 5.0), radius=5.0, fill=False)
 
 # 3. Añade el parche del círculo al eje
   ax.add_patch(circle)
 
 # 4. Establece los límites de los ejes para asegurar que el círculo sea visible
-  ax.set_xlim(0, 1)
-  ax.set_ylim(0, 1)
+  ax.set_xlim(0, 10)
+  ax.set_ylim(0, 10)
 
 # 5. Asegura que el aspecto de los ejes sea igual
   plt.axis('equal')
