@@ -51,6 +51,9 @@ if option=="Triangulo":
   col4, col5 = st.columns(2)
   col4.metric("perimetro", Perimetro2, "0")
   col5.metric("Area", area2, "0")
+  
+  color = st.color_picker("Pick A Color", "#00f900")
+  st.write("The current color is", color)
     # Coordenadas del triángulo
   vertices = [(0, 0), (2, 0), (1, 2)]
   triangulo = patches(vertices, closed=True, edgecolor=color, facecolor='none', linewidth=2)
