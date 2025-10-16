@@ -17,7 +17,6 @@ if option=="Circulo":
   col1.metric("Radio", radio, "0")
   col2.metric("Area", area1, "0")
   col3.metric("Perimetro", perimetro1, "0")
-  st.image("circulo.jpg",caption="circulo")
 if option=="Triangulo":
 # Solicitar al usuario la base y la altura
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
