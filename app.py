@@ -18,13 +18,16 @@ if option=="Circulo":
   col1.metric("Radio", radio, "0")
   col2.metric("Area", area1, "0")
   col3.metric("Perimetro", perimetro1, "0")
+
+  color = st.color_picker("Pick A Color", "#00f900")
+  st.write("The current color is", color)
 # 1. Crea una figura y un eje
   fig, ax = plt.subplots()
 
 # 2. Crea un círculo. 
 # Parámetros: centro (x, y) y radio (radius)
 # fill=False para que solo dibuje el borde
-  circle = patches.Circle((5.0, 5.0), radius=5.0, fill=False)
+  circle = patches.Circle((5.0, 5.0), radius=radio, color=color, fill=False)
 
 # 3. Añade el parche del círculo al eje
   ax.add_patch(circle)
