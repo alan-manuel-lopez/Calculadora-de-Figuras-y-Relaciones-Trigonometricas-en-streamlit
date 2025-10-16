@@ -22,6 +22,12 @@ if option=="Circulo":
     turtle.begin_fill()
     turtle.circle(radio)
     turtle.end_fill()
+    # Dibuja un círculo rojo
+dibujar_circulo("red", 50)
+
+turtle.penup()
+turtle.goto(50, 0)
+turtle.pendown()
 if option=="Triangulo":
 # Solicitar al usuario la base y la altura
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
