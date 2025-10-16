@@ -52,18 +52,18 @@ if option=="Triangulo":
   col4.metric("perimetro", Perimetro2, "0")
   col5.metric("Area", area2, "0")
     # Coordenadas del triángulo
-    vertices = [(0, 0), (2, 0), (1, 2)]
-    triangulo = patches(vertices, closed=True, edgecolor=color, facecolor='none', linewidth=2)
-    ax.add_patch(triangulo)
-    ax.set_xlim(-1, 3)
-    ax.set_ylim(-1, 3)
+  vertices = [(0, 0), (2, 0), (1, 2)]
+  triangulo = patches(vertices, closed=True, edgecolor=color, facecolor='none', linewidth=2)
+  ax.add_patch(triangulo)
+  ax.set_xlim(-1, 3)
+  ax.set_ylim(-1, 3)
 # Configurar aspecto del gráfico
-ax.set_aspect('equal')
-ax.axis('off')  # Opcional: oculta los ejes
+  ax.set_aspect('equal')
+  ax.axis('off')  # Opcional: oculta los ejes
 
 # Mostrar en Streamlit
-st.pyplot(fig)
-plt.close(fig)
+  st.pyplot(fig)
+  plt.close(fig)
 
 elif option=="Rectangulo":
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
