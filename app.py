@@ -1,6 +1,5 @@
 import streamlit as st
 import math
-import turtle
 st.title("calculadora de figuras")
 st.sidebar.write("alan manuel lopez garcia")
 option=st.selectbox(
@@ -17,17 +16,7 @@ if option=="Circulo":
   col1.metric("Radio", radio, "0")
   col2.metric("Area", area1, "0")
   col3.metric("Perimetro", perimetro1, "0")
-  def dibujar_circulo(color, radio):
-    turtle.color(color)
-    turtle.begin_fill()
-    turtle.circle(radio)
-    turtle.end_fill()
-    # Dibuja un círculo rojo
-dibujar_circulo("red", 50)
-
-turtle.penup()
-turtle.goto(50, 0)
-turtle.pendown()
+  st.image("circulo.jpg",caption="circulo")
 if option=="Triangulo":
 # Solicitar al usuario la base y la altura
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
