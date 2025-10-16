@@ -56,7 +56,7 @@ if option=="Triangulo":
   st.write("The current color is", color)
     # Coordenadas del triángulo
   vertices = [(0, 0), (2, 0), (1, 2)]
-  triangulo = patches(vertices, closed=True, edgecolor=color, facecolor='none', linewidth=2)
+  triangulo = patches(vertices, closed=True, color, facecolor='none', linewidth=2)
   ax.add_patch(triangulo)
   ax.set_xlim(-1, 3)
   ax.set_ylim(-1, 3)
