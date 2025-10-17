@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+from matplotlib.patches import Polygon
 import streamlit as st
 import math
 st.title("calculadora de figuras")
@@ -58,7 +59,7 @@ if option=="Triangulo":
   A = (0, 0)
   B = (base, 0)
   C = (base / 2, altura)
-  triangulo = patches([A, B, C], closed=True, edgecolor=color, facecolor='none', linewidth=2)
+  triangulo = Polygon([A, B, C], closed=True, edgecolor=color, facecolor='none', linewidth=2)
   ax.add_patch(triangulo)
   padding = max(base, altura) * 0.2
   ax.set_xlim(-padding, base + padding)
