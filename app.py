@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from matplotlib.patches import Polygon
+from matplotlib.patches import Rectangle
 import streamlit as st
 import math
 st.title("calculadora de figuras")
@@ -80,6 +81,19 @@ if option=="Rectangulo":
   col6, col7 = st.columns(2)
   col6.metric("perimetro", perimetro3, "0")
   col7.metric("Area", area3, "0")
+  fig, ax = plt.subplots()
+  rectangulo = Rectangle((0, 0), base, altura, edgecolor=color, facecolor='none', linewidth=2)
+  ax.add_patch(rectangulo)
+
+# Ajustes del gráfico
+  padding = altura * 0.2
+  ax.set_xlim(-padding, base + padding)
+  ax.set_ylim(-padding, altura + padding)
+  ax.set_aspect('equal')
+  ax.axis('off')  # Opcional: oculta ejes
+
+  st.pyplot(fig)
+  plt.close(fig)
 elif option=="Cuadrado":
   lado=st.slider("longitud de un lado",0.0, 10.0, 5.0)
   area4=lado**2
