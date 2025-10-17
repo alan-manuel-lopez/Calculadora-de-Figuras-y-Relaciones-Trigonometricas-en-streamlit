@@ -81,6 +81,9 @@ if option=="Rectangulo":
   col6, col7 = st.columns(2)
   col6.metric("perimetro", perimetro3, "0")
   col7.metric("Area", area3, "0")
+  
+  color = st.color_picker("Pick A Color", "#00f900")
+  st.write("The current color is", color)
   fig, ax = plt.subplots()
   rectangulo = Rectangle((0, 0), base, altura, edgecolor=color, facecolor='none', linewidth=2)
   ax.add_patch(rectangulo)
