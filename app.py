@@ -122,4 +122,51 @@ elif option=="Cuadrado":
     st.pyplot(fig)
     plt.close(fig)
 if option=="sen, cos, tan":
-    radio = st.slider("selecciona el rango", math.pi, 2*math.pi, math.pi)
+    radio = st.slider("selecciona el rango", 0.0, 2*math.pi, math.pi)
+    st.title("Funciones trigonométricas: seno, coseno y tangente")
+
+# Slider para seleccionar el ángulo
+    angulo = st.slider("Selecciona un ángulo (grados)", 0, 360, 45)
+
+# Convertir a radianes
+    radianes = np.radians(angulo)
+
+# Calcular valores trigonométricos
+    sen = np.sin(radianes)
+    cos = np.cos(radianes)
+    try:
+        tan = np.tan(radianes)
+        tan_str = f"{tan:.2f}"
+    except:
+        tan_str = "Infinito"
+
+# Mostrar resultados
+    st.markdown(f"**Seno({angulo}°):** {sen:.2f}")
+    st.markdown(f"**Coseno({angulo}°):** {cos:.2f}")
+    st.markdown(f"**Tangente({angulo}°):** {tan_str}")
+
+# --- GRAFICAR funciones seno, coseno y tangente ---
+    x = np.linspace(0, 2 * np.pi, 1000)  # Rango en radianes
+
+    fig, ax = plt.subplots(figsize=(10, 4))
+
+# Graficar funciones
+    ax.plot(np.degrees(x), np.sin(x), label="Seno", color='red')
+    ax.plot(np.degrees(x), np.cos(x), label="Coseno", color='blue')
+    ax.plot(np.degrees(x), np.tan(x), label="Tangente", color='green')
+
+# Limitar eje Y para evitar explosión de tangente
+    ax.set_ylim(-5, 5)
+
+# Añadir líneas verticales para el ángulo actual
+    ax.axvline(x=angulo, color='gray', linestyle='--', alpha=0.6)
+    ax.set_title("Gráfica de Seno, Coseno y Tangente")
+    ax.set_xlabel("Ángulo (grados)")
+    ax.set_ylabel("Valor")
+    ax.legend()
+    ax.grid(True)
+
+# Mostrar en Streamlit
+    st.pyplot(fig)
+    plt.close(fig)
+
