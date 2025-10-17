@@ -124,3 +124,8 @@ elif option=="Cuadrado":
 
     st.pyplot(fig)
     plt.close(fig)
+
+with tab2:
+    st.header("A dog")
+with tab3:
+    st.header("An owl")
