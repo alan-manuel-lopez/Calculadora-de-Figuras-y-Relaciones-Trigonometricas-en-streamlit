@@ -60,7 +60,7 @@ if option=="Triangulo":
   B = (base, 0)
   C = (base / 2, altura)
   triangulo = Polygon([A, B, C], closed=True, edgecolor=color, facecolor='none', linewidth=2)
-  ax.add_patch(triangulo)
+  ax.add_artist(triangulo)
   padding = max(base, altura) * 0.2
   ax.set_xlim(-padding, base + padding)
   ax.set_ylim(-padding, altura + padding)
