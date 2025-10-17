@@ -1,3 +1,4 @@
+
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from matplotlib.patches import Polygon
@@ -123,36 +124,32 @@ elif option=="Cuadrado":
     plt.close(fig)
 if option=="sen, cos, tan":
     radio = st.slider("selecciona el rango", 0.0, 2*math.pi, math.pi)
-    import streamlit as st
-import numpy as np
-import matplotlib.pyplot as plt
-
-st.title("Visualizador de funciones trigonométricas (en radianes)")
+    st.title("Visualizador de funciones trigonométricas (en radianes)")
 
 # Slider para ángulo individual en radianes
-angulo = st.slider("Selecciona un ángulo (radianes)", 0.0, 2 * np.pi, np.pi / 4, step=0.01, format="%.2f")
+    angulo = st.slider("Selecciona un ángulo (radianes)", 0.0, 2 * np.pi, np.pi / 4, step=0.01, format="%.2f")
 
 # Mostrar valores trigonométricos
-st.markdown(f"**Seno({angulo:.2f} rad):** {np.sin(angulo):.2f}")
-st.markdown(f"**Coseno({angulo:.2f} rad):** {np.cos(angulo):.2f}")
-try:
-    tan = np.tan(angulo)
-    tan_str = f"{tan:.2f}" if abs(tan) < 100 else "Infinito (aproximado)"
-except:
-    tan_str = "Infinito"
-st.markdown(f"**Tangente({angulo:.2f} rad):** {tan_str}")
+    st.markdown(f"**Seno({angulo:.2f} rad):** {np.sin(angulo):.2f}")
+    st.markdown(f"**Coseno({angulo:.2f} rad):** {np.cos(angulo):.2f}")
+    try:
+        tan = np.tan(angulo)
+        tan_str = f"{tan:.2f}" if abs(tan) < 100 else "Infinito (aproximado)"
+    except:
+        tan_str = "Infinito"
+    st.markdown(f"**Tangente({angulo:.2f} rad):** {tan_str}")
 
 # --- Rango del gráfico ---
-st.subheader("Rango del gráfico (eje X)")
-inicio = st.slider("Inicio del rango (radianes)", 0.0, 2*np.pi, 0.0, step=0.1, format="%.2f")
-fin = st.slider("Fin del rango (radianes)", 0.0, 2*np.pi, 2*np.pi, step=0.1, format="%.2f")
+    st.subheader("Rango del gráfico (eje X)")
+    inicio = st.slider("Inicio del rango (radianes)", 0.0, 2*np.pi, 0.0, step=0.1, format="%.2f")
+    fin = st.slider("Fin del rango (radianes)", 0.0, 2*np.pi, 2*np.pi, step=0.1, format="%.2f")
 
 # Validar que inicio < fin
-if inicio >= fin:
-    st.error("⚠️ El valor de inicio debe ser menor que el de fin.")
-else:
+    if inicio >= fin:
+        st.error("⚠️ El valor de inicio debe ser menor que el de fin.")
+    else:
     # Crear valores para X en el rango elegido
-    x = np.linspace(inicio, fin, 1000)
+        x = np.linspace(inicio, fin, 1000)
 
     # Crear gráfica
     fig, ax = plt.subplots(figsize=(10, 4))
