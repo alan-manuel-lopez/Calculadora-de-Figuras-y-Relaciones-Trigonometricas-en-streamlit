@@ -55,14 +55,16 @@ if option=="Triangulo":
   color = st.color_picker("Pick A Color", "#00f900")
   st.write("The current color is", color)
     # Coordenadas del triángulo
-  vertices = [(0, 0), (2, 0), (1, 2)]
-  triangulo = patches(vertices, closed=True, color, facecolor='none', linewidth=2)
+  A = (0, 0)
+  B = (base, 0)
+  C = (base / 2, altura)
+  triangulo = patches([A, B, C], closed=True, edgecolor=color, facecolor='none', linewidth=2)
   ax.add_patch(triangulo)
-  ax.set_xlim(-1, 3)
-  ax.set_ylim(-1, 3)
-# Configurar aspecto del gráfico
+  padding = max(base, altura) * 0.2
+  ax.set_xlim(-padding, base + padding)
+  ax.set_ylim(-padding, altura + padding)
   ax.set_aspect('equal')
-  ax.axis('off')  # Opcional: oculta los ejes
+  ax.axis('off') # Opcional: oculta los ejes
 
 # Mostrar en Streamlit
   st.pyplot(fig)
