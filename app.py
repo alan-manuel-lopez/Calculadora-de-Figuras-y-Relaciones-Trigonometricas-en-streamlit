@@ -71,7 +71,7 @@ ax.axis('off') # Opcional: oculta los ejes
 st.pyplot(fig)
 plt.close(fig)
 
-elif option=="Rectangulo":
+if option=="Rectangulo":
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
   altura= st.slider("seleccione la altura", 0.0, 10.0, 5.0)
   area3=base*altura
