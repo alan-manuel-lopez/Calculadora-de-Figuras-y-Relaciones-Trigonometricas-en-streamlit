@@ -4,6 +4,7 @@ from matplotlib.patches import Polygon
 from matplotlib.patches import Rectangle
 import streamlit as st
 import math
+import numpy as np
 st.title("calculadora de figuras y funciones")
 st.sidebar.write("alan manuel lopez garcia")
 option=st.selectbox(
