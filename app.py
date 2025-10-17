@@ -104,3 +104,19 @@ elif option=="Cuadrado":
   col8, col9 = st.columns(2)
   col8.metric("perimetro", Perimetro4, "0")
   col9.metric("Area", area4, "0")
+
+  color = st.color_picker("Pick A Color", "#00f900")
+  st.write("The current color is", color)
+  fig, ax = plt.subplots()
+  cuadrado = Rectangle((0, 0), lado, lado, edgecolor=color, facecolor='none', linewidth=2)
+  ax.add_patch(cuadrado)
+
+# Ajustes del gráfico
+  padding = lado * 0.2
+  ax.set_xlim(-padding, lado + padding)
+  ax.set_ylim(-padding, lado + padding)
+  ax.set_aspect('equal')
+  ax.axis('off')  # Opcional: oculta ejes
+
+  st.pyplot(fig)
+  plt.close(fig)
