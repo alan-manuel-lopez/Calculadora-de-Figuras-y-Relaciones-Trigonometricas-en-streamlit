@@ -68,8 +68,8 @@ ax.set_aspect('equal')
 ax.axis('off') # Opcional: oculta los ejes
 
 # Mostrar en Streamlit
-  st.pyplot(fig)
-  plt.close(fig)
+st.pyplot(fig)
+plt.close(fig)
 
 elif option=="Rectangulo":
   base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
