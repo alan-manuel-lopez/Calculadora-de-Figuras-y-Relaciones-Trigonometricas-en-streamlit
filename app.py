@@ -14,7 +14,7 @@ option=st.selectbox(
     "¿Que figura deseas calcular?",
 ("Circulo","Triangulo","Rectangulo","Cuadrado"),
   )
-  st.write("Eleccion:",option)
+st.write("Eleccion:",option)
 #solicitar un radio
   if option=="Circulo":
     radio = st.slider("selecciona el radio", 0.0, 10.0, 5.0)
