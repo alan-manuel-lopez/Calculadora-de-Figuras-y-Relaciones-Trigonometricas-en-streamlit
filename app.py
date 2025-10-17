@@ -61,7 +61,7 @@ if option=="Triangulo":
   C = (base / 2, altura)
   fig, ax = plt.subplots()
   triangulo = Polygon([A, B, C], closed=True, edgecolor=color, facecolor='none', linewidth=2)
-  ax.add_patches(triangulo)
+  ax.add_patch(triangulo)
   padding = max(base, altura) * 0.2
   ax.set_xlim(-padding, base + padding)
   ax.set_ylim(-padding, altura + padding)
