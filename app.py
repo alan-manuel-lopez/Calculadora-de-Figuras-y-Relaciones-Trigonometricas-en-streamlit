@@ -1,4 +1,4 @@
-
+#librerias que se utilizaran
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from matplotlib.patches import Polygon
@@ -6,18 +6,21 @@ from matplotlib.patches import Rectangle
 import streamlit as st
 import math
 import numpy as np
+#nombre de la aplicacion en pantalla e informacion del autor
 st.title("calculadora de figuras y funciones")
-st.sidebar.write("alan manuel lopez garcia")
+st.sidebar.write("alan manuel lopez garcia 377341")
+#caja seleccionadora de las distintas funciones qu eofrece la app
 option=st.selectbox(
     "¿Que figura deseas calcular?",
 ("Circulo","Triangulo","Rectangulo","Cuadrado","sen, cos, tan"),
   )
 st.write("Eleccion:",option)
-#solicitar un radio
+#solicitar un radio para realizar los calculos
 if option=="Circulo":
     radio = st.slider("selecciona el radio", 0.0, 10.0, 5.0)
     area1=math.pi * radio**2
     perimetro1=2*math.pi*radio
+    #mostrara los datos en pantalla
     col1, col2, col3 = st.columns(3)
     col1.metric("Radio", radio, "0")
     col2.metric("Area", area1, "0")
@@ -74,7 +77,7 @@ if option=="Triangulo":
 # Mostrar en Streamlit
     st.pyplot(fig)
     plt.close(fig)
-
+#se uso if para que al momento de elegir una funcion u opcion en la caja de opciones solo muestre lo requerido
 if option=="Rectangulo":
     base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
     altura= st.slider("seleccione la altura", 0.0, 10.0, 5.0)
