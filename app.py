@@ -16,7 +16,7 @@ option=st.selectbox(
   )
 st.write("Eleccion:",option)
 #solicitar un radio
-  if option=="Circulo":
+if option=="Circulo":
     radio = st.slider("selecciona el radio", 0.0, 10.0, 5.0)
     area1=math.pi * radio**2
     perimetro1=2*math.pi*radio
