@@ -121,3 +121,5 @@ elif option=="Cuadrado":
 
     st.pyplot(fig)
     plt.close(fig)
+if option=="sen, cos, tan":
+    radio = st.slider("selecciona el rango", math.pi, 2math.pi, math.pi)
