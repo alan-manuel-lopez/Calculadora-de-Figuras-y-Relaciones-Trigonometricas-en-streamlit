@@ -44,7 +44,7 @@ if option=="Circulo":
 # Mostrar en Streamlit
     st.pyplot(fig)
     plt.close(fig)
-  if option=="Triangulo":
+if option=="Triangulo":
 # Solicitar al usuario la base y la altura
     base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
     altura= st.slider("seleccione la altura", 0.0, 10.0, 5.0)
@@ -77,7 +77,7 @@ if option=="Circulo":
     st.pyplot(fig)
     plt.close(fig)
 
-  if option=="Rectangulo":
+if option=="Rectangulo":
     base = st.slider("seleccione la longitud de la base", 0.0, 10.0, 5.0) 
     altura= st.slider("seleccione la altura", 0.0, 10.0, 5.0)
     area3=base*altura
@@ -101,7 +101,7 @@ if option=="Circulo":
 
     st.pyplot(fig)
     plt.close(fig)
-  elif option=="Cuadrado":
+ elif option=="Cuadrado":
     lado=st.slider("longitud de un lado",0.0, 10.0, 5.0)
     area4=lado**2
     Perimetro4=4*lado
