@@ -10,7 +10,7 @@ tab1, tab2, tab3 = st.tabs(["figuras", "funciones", "Otros"])
 
 with tab1:
     st.header("figures")
-  option=st.selectbox(
+option=st.selectbox(
     "¿Que figura deseas calcular?",
     ("Circulo","Triangulo","Rectangulo","Cuadrado"),
   )
