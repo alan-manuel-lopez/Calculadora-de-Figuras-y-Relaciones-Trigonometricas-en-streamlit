@@ -12,7 +12,7 @@ with tab1:
     st.header("figures")
 option=st.selectbox(
     "¿Que figura deseas calcular?",
-    ("Circulo","Triangulo","Rectangulo","Cuadrado"),
+("Circulo","Triangulo","Rectangulo","Cuadrado"),
   )
   st.write("Eleccion:",option)
 #solicitar un radio
