@@ -4,15 +4,11 @@ from matplotlib.patches import Polygon
 from matplotlib.patches import Rectangle
 import streamlit as st
 import math
-st.title("calculadora de figuras")
+st.title("calculadora de figuras y funciones")
 st.sidebar.write("alan manuel lopez garcia")
-tab1, tab2, tab3 = st.tabs(["figuras", "funciones", "Otros"])
-
-with tab1:
-    st.header("figures")
 option=st.selectbox(
     "¿Que figura deseas calcular?",
-("Circulo","Triangulo","Rectangulo","Cuadrado"),
+("Circulo","Triangulo","Rectangulo","Cuadrado","sen, cos, tan"),
   )
 st.write("Eleccion:",option)
 #solicitar un radio
@@ -124,8 +120,3 @@ elif option=="Cuadrado":
 
     st.pyplot(fig)
     plt.close(fig)
-
-with tab2:
-    st.header("A dog")
-with tab3:
-    st.header("An owl")
